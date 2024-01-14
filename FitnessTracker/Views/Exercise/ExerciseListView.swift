@@ -15,8 +15,16 @@ struct ExerciseListView: View {
         List {
             ForEach(store.exercises) { exercise in
                 ExerciseRow(exercise)
+                    .contextMenu {
+                        editExerciseButton(exercise)
+                        deleteExerciseButton(exercise)
+                    }
                     .swipeActions(allowsFullSwipe: false) {
-                        exerciseMenu(exercise)
+                        Group {
+                            deleteExerciseButton(exercise, setRole: false)
+                            editExerciseButton(exercise)
+                        }
+                        .labelStyle(.titleOnly)
                     }
             }
         }
@@ -57,16 +65,21 @@ struct ExerciseListView: View {
 
     }
     
-    @ViewBuilder
-    private func exerciseMenu(_ exercise: Exercise) -> some View {
-        Button("Delete") {
+    private func deleteExerciseButton(_ exercise: Exercise, setRole: Bool = true) -> some View {
+        Button(role: setRole ? .destructive : nil) {
             proposedExerciseIdDeletion = exercise.id
             isProposingDeletion = true
+        } label: {
+            Label("Delete", systemImage: "trash")
         }
         .tint(.red)
-        
-        Button("Edit") {
+    }
+    
+    private func editExerciseButton(_ exercise: Exercise) -> some View {
+        Button {
             proposedExerciseEdit = exercise
+        } label: {
+            Label("Edit", systemImage: "pencil")
         }
     }
 }
