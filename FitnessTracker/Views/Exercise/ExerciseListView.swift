@@ -28,6 +28,11 @@ struct ExerciseListView: View {
                     }
             }
         }
+        .overlay {
+            if store.exercises.isEmpty {
+                noExercisesView
+            }
+        }
         .animation(.default, value: store.exercises)
         .navigationTitle("Exercises")
         .toolbar {
@@ -80,6 +85,19 @@ struct ExerciseListView: View {
             proposedExerciseEdit = exercise
         } label: {
             Label("Edit", systemImage: "pencil")
+        }
+    }
+    
+    private var noExercisesView: some View {
+        ContentUnavailableView {
+            Label("No Exercises", systemImage: "figure.run.square.stack.fill")
+        } description: {
+            Text("Begin by creating an exercise")
+        } actions: {
+            Button("Create Exercise") {
+                isAddingExercise = true
+            }
+            .buttonStyle(.borderedProminent)
         }
     }
 }
