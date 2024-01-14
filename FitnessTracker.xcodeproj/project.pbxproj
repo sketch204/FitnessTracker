@@ -19,6 +19,7 @@
 		2DA699222B545A5C00711982 /* Exercise+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699212B545A5C00711982 /* Exercise+Preview.swift */; };
 		2DA699242B545AC300711982 /* ExerciseStore+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699232B545AC300711982 /* ExerciseStore+Preview.swift */; };
 		2DA699262B545B7C00711982 /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699252B545B7C00711982 /* ExerciseRow.swift */; };
+		2DA699292B545CA800711982 /* EditExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699282B545CA800711982 /* EditExerciseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		2DA699212B545A5C00711982 /* Exercise+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+Preview.swift"; sourceTree = "<group>"; };
 		2DA699232B545AC300711982 /* ExerciseStore+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExerciseStore+Preview.swift"; sourceTree = "<group>"; };
 		2DA699252B545B7C00711982 /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
+		2DA699282B545CA800711982 /* EditExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExerciseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				2DA6991F2B545A2700711982 /* ExerciseListView.swift */,
 				2DA699252B545B7C00711982 /* ExerciseRow.swift */,
+				2DA699282B545CA800711982 /* EditExerciseView.swift */,
 			);
 			path = Exercise;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				2DA6991A2B5459AE00711982 /* ContentView.swift in Sources */,
 				2DA699202B545A2700711982 /* ExerciseListView.swift in Sources */,
 				2DA699222B545A5C00711982 /* Exercise+Preview.swift in Sources */,
+				2DA699292B545CA800711982 /* EditExerciseView.swift in Sources */,
 				2DA699242B545AC300711982 /* ExerciseStore+Preview.swift in Sources */,
 				2DA699262B545B7C00711982 /* ExerciseRow.swift in Sources */,
 				2DA698EA2B544F5800711982 /* FitnessTrackerApp.swift in Sources */,
