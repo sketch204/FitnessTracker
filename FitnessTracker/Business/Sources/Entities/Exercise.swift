@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Exercise: Identifiable {
+public struct Exercise: Equatable, Hashable, Identifiable {
     public let id: Identifier<Self, UUID>
     public let name: String
     public let description: String?
