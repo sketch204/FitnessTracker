@@ -6,6 +6,8 @@ struct ExerciseListView: View {
     
     @State private var isAddingExercise: Bool = false
     
+    @State private var proposedExerciseEdit: Exercise?
+    
     @State private var isProposingDeletion: Bool = false
     @State private var proposedExerciseIdDeletion: Exercise.ID?
     
@@ -14,11 +16,7 @@ struct ExerciseListView: View {
             ForEach(store.exercises) { exercise in
                 ExerciseRow(exercise)
                     .swipeActions(allowsFullSwipe: false) {
-                        Button("Delete") {
-                            proposedExerciseIdDeletion = exercise.id
-                            isProposingDeletion = true
-                        }
-                        .tint(.red)
+                        exerciseMenu(exercise)
                     }
             }
         }
@@ -34,6 +32,11 @@ struct ExerciseListView: View {
         .sheet(isPresented: $isAddingExercise) {
             NavigationStack {
                 EditExerciseView(store: store)
+            }
+        }
+        .sheet(item: $proposedExerciseEdit) { exercise in
+            NavigationStack {
+                EditExerciseView(exercise: exercise, store: store)
             }
         }
         .confirmationDialog(
@@ -52,6 +55,19 @@ struct ExerciseListView: View {
                 Text("This action cannot be undone")
             }
 
+    }
+    
+    @ViewBuilder
+    private func exerciseMenu(_ exercise: Exercise) -> some View {
+        Button("Delete") {
+            proposedExerciseIdDeletion = exercise.id
+            isProposingDeletion = true
+        }
+        .tint(.red)
+        
+        Button("Edit") {
+            proposedExerciseEdit = exercise
+        }
     }
 }
 
