@@ -22,6 +22,7 @@ struct ExerciseListView: View {
                     }
             }
         }
+        .animation(.default, value: store.exercises)
         .navigationTitle("Exercises")
         .toolbar {
             Button {
