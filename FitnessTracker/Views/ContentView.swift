@@ -1,14 +1,13 @@
+import Business
 import SwiftUI
 
 struct ContentView: View {
+    let store = ExerciseStore()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ExerciseListView(store: store)
         }
-        .padding()
     }
 }
 
