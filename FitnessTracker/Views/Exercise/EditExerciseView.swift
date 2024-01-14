@@ -18,8 +18,8 @@ struct EditExerciseView: View {
     init(exercise: Exercise? = nil, store: ExerciseStore) {
         self.store = store
         self.exerciseId = exercise?.id
-        _name = State(wrappedValue: name)
-        _description = State(wrappedValue: description)
+        _name = State(wrappedValue: exercise?.name ?? "")
+        _description = State(wrappedValue: exercise?.description ?? "")
     }
     
     var body: some View {
