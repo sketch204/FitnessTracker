@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2DA698EA2B544F5800711982 /* FitnessTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA698E92B544F5800711982 /* FitnessTrackerApp.swift */; };
-		2DA698EC2B544F5800711982 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA698EB2B544F5800711982 /* ContentView.swift */; };
 		2DA698EE2B544F5A00711982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA698ED2B544F5A00711982 /* Assets.xcassets */; };
 		2DA698F22B544F5A00711982 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA698F12B544F5A00711982 /* Preview Assets.xcassets */; };
 		2DA698FC2B544F5A00711982 /* FitnessTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA698FB2B544F5A00711982 /* FitnessTrackerTests.swift */; };
 		2DA699062B544F5A00711982 /* FitnessTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699052B544F5A00711982 /* FitnessTrackerUITests.swift */; };
 		2DA699082B544F5A00711982 /* FitnessTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699072B544F5A00711982 /* FitnessTrackerUITestsLaunchTests.swift */; };
 		2DA699172B5450ED00711982 /* Business in Frameworks */ = {isa = PBXBuildFile; productRef = 2DA699162B5450ED00711982 /* Business */; };
+		2DA6991A2B5459AE00711982 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699192B5459AE00711982 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		2DA698E62B544F5800711982 /* FitnessTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA698E92B544F5800711982 /* FitnessTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTrackerApp.swift; sourceTree = "<group>"; };
-		2DA698EB2B544F5800711982 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2DA698ED2B544F5A00711982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DA698EF2B544F5A00711982 /* FitnessTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitnessTracker.entitlements; sourceTree = "<group>"; };
 		2DA698F12B544F5A00711982 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		2DA699052B544F5A00711982 /* FitnessTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTrackerUITests.swift; sourceTree = "<group>"; };
 		2DA699072B544F5A00711982 /* FitnessTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2DA699142B5450C700711982 /* Business */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Business; sourceTree = "<group>"; };
+		2DA699192B5459AE00711982 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				2DA699142B5450C700711982 /* Business */,
+				2DA699182B5459A200711982 /* Views */,
 				2DA698E92B544F5800711982 /* FitnessTrackerApp.swift */,
-				2DA698EB2B544F5800711982 /* ContentView.swift */,
 				2DA698ED2B544F5A00711982 /* Assets.xcassets */,
 				2DA698EF2B544F5A00711982 /* FitnessTracker.entitlements */,
 				2DA698F02B544F5A00711982 /* Preview Content */,
@@ -139,6 +139,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2DA699182B5459A200711982 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DA699192B5459AE00711982 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DA698EC2B544F5800711982 /* ContentView.swift in Sources */,
+				2DA6991A2B5459AE00711982 /* ContentView.swift in Sources */,
 				2DA698EA2B544F5800711982 /* FitnessTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

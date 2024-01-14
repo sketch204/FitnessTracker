@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  FitnessTracker
-//
-//  Created by Inal Gotov on 2024-01-14.
-//
-
 import SwiftUI
 
 struct ContentView: View {
