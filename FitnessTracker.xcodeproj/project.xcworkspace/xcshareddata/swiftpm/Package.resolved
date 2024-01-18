@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "blobber",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sketch204/Blobber",
+      "state" : {
+        "revision" : "5732dbcbece995e9faa1d926afb61132359c6838",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
